@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tf-idf on Alberto Ortiz</title>
+    <link>https://projectile-man.github.io/tags/tf-idf/</link>
+    <description>Recent content in tf-idf on Alberto Ortiz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alberto Ortiz - All rights reserved</copyright>
+    <lastBuildDate>Fri, 14 Aug 2020 11:40:11 +0200</lastBuildDate><atom:link href="https://projectile-man.github.io/tags/tf-idf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Preprocesamiento de Texto NLP</title>
+      <link>https://projectile-man.github.io/blog/preprocesamiento-nlp/preprocesamiento-nlp/</link>
+      <pubDate>Fri, 14 Aug 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/preprocesamiento-nlp/preprocesamiento-nlp/</guid>
+      <description>El procedimiento de conversión de los datos en formato de texto a un formato entendible para la computadora, es decir conversion a números, se llama feature engineering de datos de texto.</description>
+    </item>
+    
+  </channel>
+</rss>

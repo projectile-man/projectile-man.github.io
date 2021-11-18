@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>timeseries on Alberto Ortiz</title>
+    <link>https://projectile-man.github.io/tags/timeseries/</link>
+    <description>Recent content in timeseries on Alberto Ortiz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alberto Ortiz - All rights reserved</copyright>
+    <lastBuildDate>Sat, 19 Sep 2020 11:40:11 +0200</lastBuildDate><atom:link href="https://projectile-man.github.io/tags/timeseries/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducción a las series de tiempo</title>
+      <link>https://projectile-man.github.io/blog/intro-timeseries/intro-timeseries/</link>
+      <pubDate>Sat, 19 Sep 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/intro-timeseries/intro-timeseries/</guid>
+      <description>Este post será una introducción a las series de tiempo, sus componentes y veremos como descomponerla en sus propiedades.
+Primero que nada debemos de tener en mente qué tipo de datos vamos a tratar antes de realizar cualquier análisis, entre los tipos de datos que podemos tener son: Datos de series de tiempo (Time series data), Datos transversales (Cross-section data), Datos Panel o Datos longitudinales (Panel/Longitudinal Data).</description>
+    </item>
+    
+  </channel>
+</rss>

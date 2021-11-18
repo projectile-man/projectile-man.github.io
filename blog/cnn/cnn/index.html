@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.84.4" />
+	
+	<link rel="icon" href="/images/logo.png">
+	
+	<title>Red Neuronal Convolucional - CNN | Alberto Ortiz</title>
+	
+	
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Red Neuronal Convolucional - CNN"/>
+<meta name="twitter:description" content="Ahora en este post vamos a ver la segunda red neuronal llamada Red Neuronal Convolucional (Convolutional Neural Network), si no has leído el post en que hablo del perceptron multicapa te dejo el link."/>
+
+	<meta property="og:title" content="Red Neuronal Convolucional - CNN" />
+<meta property="og:description" content="Ahora en este post vamos a ver la segunda red neuronal llamada Red Neuronal Convolucional (Convolutional Neural Network), si no has leído el post en que hablo del perceptron multicapa te dejo el link." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://projectile-man.github.io/blog/cnn/cnn/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2020-09-21T16:26:30-06:00" />
+<meta property="article:modified_time" content="2020-09-21T16:26:30-06:00" />
+
+
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+
+	
+	<link rel="stylesheet" href="https://projectile-man.github.io/css/medium.d5cc2020527a039e1334e339e0bc1e2bbd7a463ec0b7279d481b9216bffb4d43.css" integrity="sha256-1cwgIFJ6A54TNOM54LweK716Rj7AtyedSBuSFr/7TUM=">
+
+	
+	<link rel="stylesheet" href="https://projectile-man.github.io/css/additional.8819b6defcdc6d21280f9b402b00df87ca779135901de6c22e708c62e20184b9.css" integrity="sha256-iBm23vzcbSEoD5tAKwDfh8p3kTWQHebCLnCMYuIBhLk=">
+
+	
+	
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container pr-0">
+        
+        <a class="navbar-brand" href="https://projectile-man.github.io/">
+
+            
+            <img src="/images/logo.png" alt="logo">
+            
+        </a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarMediumish">
+            
+            <ul class="navbar-nav ml-auto">
+                 
+                <li class="nav-item ">
+                    <a class="nav-link" href="/blog">Blog</a>
+                </li>
+                 
+                <li class="nav-item ">
+                    <a class="nav-link" href="/">About Me</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+
+        <div class="site-content">   
+            <div class="container">
+<div class="mainheading">
+    <h1 class="sitetitle">Alberto Ortiz</h1>
+    <p class="lead">
+         Hola, soy Alberto y este espacio es para compartir mi experiencia relacionada con el grandioso mundo de los datos.
+    </p>
+</div><div class="main-content">
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-2 pl-0"><div class="share sticky-top sticky-top-offset">
+    
+    
+</div>
+</div>
+                                
+                <div class="col-md-9 flex-first flex-md-unordered">
+                    <div class="mainheading">
+                        	
+                        
+                        
+                        
+                        <div class="row post-top-meta">
+                            <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0 md-nopad-right">
+                                <img class="author-thumb" src="/images/author.png" alt="Alberto Ortiz">
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left md-nopad-left">
+                                <a target="_blank" class="link-dark">Alberto Ortiz</a><br>
+                                <span class="author-description">
+                                    Data Analyst<br>
+                                    <i class="far fa-star"></i>
+                                    Sep 21, 2020
+                                    <i class="far fa-clock clock"></i>
+                                    5 min read
+                                </span>					
+                            </div>
+                        </div>			
+                        	
+                        
+                                                
+                        
+                        <h1 class="posttitle">Red Neuronal Convolucional - CNN</h1> 
+                    </div>
+
+                    
+                    
+                    
+                    
+
+                    
+                    <div class="article-post">
+                        <p><img src="https://drive.google.com//uc?id=17-2jsZ2wcbY3Q3V-86yclq_BZOy4--rc" alt=""></p>
+<p>Ahora en este post vamos a ver la segunda red neuronal llamada Red Neuronal Convolucional (Convolutional Neural Network), si no has leído el post en que hablo del perceptron multicapa te dejo el <a href="https://projectile-man.github.io/2020/08/25/Perceptr%C3%B3n-multicapa.html">link</a>.</p>
+<p>Comunmente este tipo de red neural se ocupa para datos multi-dimensionales como imágenes o videos. La red neuronal convolucional resalta en la extracción de características con la finalidad de realizar clasificaciones, segmentaciones, y otras tareas. En algunos casos también se ocupa en datos secuenciales usando la forma del input en una dimensión.</p>
+<p>A continuación presento la arquitectura que conforma una red neuronal convolucional, la cual a comparación del perceptron multicapa presenta algunos cambios como por ejemplo, en lugar de tener un vector como input o entrada, el tensor que entrara en la red neuronal convolucional tiene nuevas dimensiones (altura, anchura, canales) y para el ejemplo de MNIST (altura_imagen_numero, anchura_imagen_numero, 1), por lo que sabemos las imágenes de un número en el conjunto de datos de MNIST constan de una altura de 28 pixeles, y una anchura igualmente de 28 pixeles por lo que las dimensiones del tensor quedarían (28, 28, 1) .</p>
+<p><img src="https://drive.google.com//uc?id=1cuDs-libYJwFvSdEdDz3E4PnDh97dmYk" alt=""></p>
+<h4 id="convolución">Convolución</h4>
+<p>Notar que la parte que mas caracteriza las operaciones de una red neuronal convolucional es el kernel. El kernel se puede pensar como una ventana rectangular que va repasando toda la imagen de izquierda a derecha y de arriba a abajo, dicha operación se llama convolución, y a grandes rasgos lo que hace es transformar una imagen en un mapeo de características que representa lo aprendido por el kernel en la imagen de entrada. El mapeo de características resiltante del proceso pasado se vuelve a transformar por las capas siguientes generando otro mapeo de las características y así sucesivamente. El argumento que recibe Conv2D “filters” es que controla el número de mapas de características que se generan. A continuación se puede el proceso de la convolución con un kernel de 3×3:</p>
+<p><img src="https://drive.google.com//uc?id=12QAnSFFwU4hGgVy-cSMcTy91aL_ND6D9" alt=""></p>
+<p><img src="https://drive.google.com//uc?id=1sDjcTtm8_ynqxDafMItlWN8qF7CD7TXf" alt=""></p>
+<p>La convolucion en las imágenes se muestra en pasos de tn y tn+1 donde el kernel el pasos de 1 hacia la derecha.</p>
+<p>El cálculo involucrado en la convolución se muestra en la siguiente ilustración:</p>
+<p><img src="https://drive.google.com//uc?id=1624jEqsc6oKcP-QN5gAxAbiEOCZSj1vi" alt=""></p>
+<p>Para fines de la explicación vamos a suponer que tenemos una imagen de 5×5, y donde tenemos un kernel de 3×3 que se muestra en la parte sombreada de la ilustración. El cálculo que se realiza para f11, f12 y f13 es como sigue:</p>
+<p><img src="https://drive.google.com//uc?id=1uD_o1CUpymB7SEXlE-pAGDvBppViQw8a" alt=""></p>
+<p>y de manera sucesiva para los demás. Como lo puedes apreciar en la ilustración anterior, la imagen resultante después de la convolución es mas pequeño, esto es porque la convolución solo se realiza en elementos validos, es decir, si tenemos por ejemplo una imagen de 6×6 con un kernel de 3×3 y paso de 2 (cada dos pixeles) tendríamos lo siguiente:</p>
+<p><img src="https://drive.google.com//uc?id=1pJUuAfl1EWHGq4ENJb-GENN1jTMl70pX" alt=""></p>
+<p>Las orillas de la imagen no serian tomadas en cuenta y el resultado es un mapeo de características de 2×2, el kernel no puede ir más allá de los bordes, si deseamos que las dimensiones de entrada sean las mismas que la de salida Conv2D acepta el parámetro padding=’same’, lo que hace es solo rellenar con ceros alrededor de los bordes para mantener las dimensiones sin cambios después de la convolución.</p>
+<p>Las operaciones de la capa de <em>MaxPooling2D</em> con el argumento de <em>pool_size=2</em> comprime cada mapa de características, cada ventana de tamaño nxn se reduce a un punto del mapeo de las características, y el valor que toma dicho punto de salida es el valor máximo dentro de la ventana, el siguiente diagrama muestra lo antes mencionado:</p>
+<p><img src="https://drive.google.com//uc?id=1JINv4J27yBj4nR35g9lzofqeOwGq4dVn" alt=""></p>
+<p>El calculo de cada f del mapeo de características es como sigue:</p>
+<p><img src="https://drive.google.com//uc?id=1bZJXfqDkoeihMrI8hjIS2cylP6YlTuoa" alt=""></p>
+<p>y de forma sucesiva para los demás elementos. La importancia que tiene tiene el maxpooling es la reducción del tamaño del mapeo de las características, algo importante que mencionar es que tanto para la capa de Conv2D como para el MaxPooling, el kernel y el pool_size pueden NO se cuadrados, en tal caso se debemos indicar el tamaño de las filas como el de las columnas, por ejemplo pool_size=(2,3) y kernel = (2,4). En el primer diagrama se tiene la función Flatten y su propósito es transformar la pila de mapas de características a una forma vectorial que sea adecuado para las capas de Droput y Dense. Una vez explicado el funcionamiento de cada uno de los componentes que conformar el proceso de una CNN pasamos a la implementación.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+<span style="color:#f92672">from</span> tensorflow.keras.models <span style="color:#f92672">import</span> Sequential
+<span style="color:#f92672">from</span> tensorflow.keras.layers <span style="color:#f92672">import</span> Activation, Dense, Dropout
+<span style="color:#f92672">from</span> tensorflow.keras.layers <span style="color:#f92672">import</span> Conv2D, MaxPooling2D, Flatten
+<span style="color:#f92672">from</span> tensorflow.keras.utils <span style="color:#f92672">import</span> to_categorical, plot_model
+<span style="color:#f92672">from</span> tensorflow.keras.datasets <span style="color:#f92672">import</span> mnist
+<span style="color:#f92672">import</span> tensorflow.keras
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#cargamos el dataset y lo partimos en entranamiento y prueba</span>
+(x_entrenamiento, y_entrenamiento), (x_prueba, y_prueba) <span style="color:#f92672">=</span> mnist<span style="color:#f92672">.</span>load_data()
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#calculamos el numero de clases, deben de ser 10</span>
+num_clases <span style="color:#f92672">=</span> len(np<span style="color:#f92672">.</span>unique(y_entrenamiento))
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#convertimos la variable de las categorias a un vector One Hot</span>
+y_entrenamiento <span style="color:#f92672">=</span> to_categorical(y_entrenamiento)
+y_prueba <span style="color:#f92672">=</span> to_categorical(y_prueba)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># dimensiones de la imagen de entrada</span>
+tamanio_imagen <span style="color:#f92672">=</span> x_entrenamiento<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#Hacemos un reescalamiento y normalizamos</span>
+x_entrenamiento <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>reshape(x_entrenamiento,[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, tamanio_imagen, tamanio_imagen, <span style="color:#ae81ff">1</span>])
+x_prueba <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>reshape(x_prueba,[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, tamanio_imagen, tamanio_imagen, <span style="color:#ae81ff">1</span>])
+x_entrenamiento <span style="color:#f92672">=</span> x_entrenamiento<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;float32&#39;</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">255</span>
+x_prueba <span style="color:#f92672">=</span> x_prueba<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;float32&#39;</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">255</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#parametros del modelo</span>
+input_shape <span style="color:#f92672">=</span> (tamanio_imagen, tamanio_imagen, <span style="color:#ae81ff">1</span>)
+batch_size  <span style="color:#f92672">=</span> <span style="color:#ae81ff">128</span>
+kernel_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+pool_size   <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+filters     <span style="color:#f92672">=</span> <span style="color:#ae81ff">64</span>
+dropout     <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.2</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#modelo es una pila de CNN-ReLU-MaxPooling</span>
+modelo <span style="color:#f92672">=</span> Sequential()
+
+modelo<span style="color:#f92672">.</span>add(Conv2D(filters<span style="color:#f92672">=</span>filters,
+                  kernel_size<span style="color:#f92672">=</span>kernel_size,
+                  activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;relu&#39;</span>,
+                  input_shape<span style="color:#f92672">=</span>input_shape))
+
+modelo<span style="color:#f92672">.</span>add(MaxPooling2D(pool_size))
+
+modelo<span style="color:#f92672">.</span>add(Conv2D(filters<span style="color:#f92672">=</span>filters,
+                  kernel_size<span style="color:#f92672">=</span>kernel_size,
+                  activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;relu&#39;</span>))
+
+modelo<span style="color:#f92672">.</span>add(MaxPooling2D(pool_size))
+
+modelo<span style="color:#f92672">.</span>add(Conv2D(filters<span style="color:#f92672">=</span>filters,
+                  kernel_size<span style="color:#f92672">=</span>kernel_size,
+                  activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;relu&#39;</span>))
+
+modelo<span style="color:#f92672">.</span>add(Flatten())
+
+modelo<span style="color:#f92672">.</span>add(Dropout(dropout))
+
+modelo<span style="color:#f92672">.</span>add(Dense(num_clases))
+
+modelo<span style="color:#f92672">.</span>add(Activation(<span style="color:#e6db74">&#39;softmax&#39;</span>))
+
+modelo<span style="color:#f92672">.</span>compile(loss<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;categorical_crossentropy&#39;</span>,
+               optimizer<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;adam&#39;</span>,
+               metrics<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;accuracy&#39;</span>])
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#y por ultimo entrenamos</span>
+modelo<span style="color:#f92672">.</span>fit(x_entrenamiento, y_entrenamiento, epochs<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, batch_size<span style="color:#f92672">=</span>batch_size)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">_, acc <span style="color:#f92672">=</span> modelo<span style="color:#f92672">.</span>evaluate(x_prueba,y_prueba,batch_size<span style="color:#f92672">=</span>batch_size,verbose<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Precisión del modelo: </span><span style="color:#e6db74">%.1f%%</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> (<span style="color:#ae81ff">100.0</span> <span style="color:#f92672">*</span> acc))
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1gzvHxyc-F1rn4I1ZYGbcYfaROMrGloPZ" alt=""></p>
+<p>Y obtenemos una precisión muy buena del modelo 99.2% mejor que el perceptron multicapa.</p>
+<p>Por último sólo nos queda guardar el modelo por si llegamos a realizar un sistema que reconozca números:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">modelo<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#39;modeloCNN_MNIST.h5&#39;</span>)
+
+<span style="color:#75715e"># y para cargarlo y realizar clasificaciones futuras</span>
+load_model <span style="color:#f92672">=</span> tensorflow<span style="color:#f92672">.</span>keras<span style="color:#f92672">.</span>models<span style="color:#f92672">.</span>load_model(<span style="color:#e6db74">&#39;modeloCNN_MNIST.h5&#39;</span>)
+</code></pre></div><p>Bien por el momento es todo, espero que les sea de ayuda y ahora es su turno de implementar la red neuronal, en los proximos post añadiré otro tipo de arquitecturas con su propia implementación, sin más por el momento les mando un saludo.</p>
+
+                    </div>
+                    
+                    
+                    <div class="after-post-tags">
+                        <ul class="tags">
+                        
+                        <li>
+                        <a href="/tags/redes-neuronales">redes neuronales</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/tensorflow">tensorflow</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/python">python</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/cnn">CNN</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/convolucion">convolucion</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/mnist">MNIST</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/keras">keras</a>
+                        </li>
+                        
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    
+                        <a class="d-block col-md-6" href="https://projectile-man.github.io/blog/rnn/rnn/"> &laquo; Red Neuronal Recurrente - RNN</a>
+                    
+                    
+                        <a class="d-block col-md-6 text-lg-right" href="https://projectile-man.github.io/blog/intro-timeseries/intro-timeseries/">Introducción a las series de tiempo &raquo;</a>
+                    
+                    <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+            </div>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                &copy; Copyright Alberto Ortiz - All rights reserved
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+        </div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<script src="https://projectile-man.github.io/js/mediumish.84218587c174fd40bce82544b98851670f0b124a7324b349c54a4065e2b32ffc.js" integrity="sha256-hCGFh8F0/UC86CVEuYhRZw8LEkpzJLNJxUpAZeKzL/w="></script>
+    </body>
+</html>

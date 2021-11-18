@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on Alberto Ortiz</title>
+    <link>https://projectile-man.github.io/tags/python/</link>
+    <description>Recent content in python on Alberto Ortiz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alberto Ortiz - All rights reserved</copyright>
+    <lastBuildDate>Sun, 21 Mar 2021 11:40:11 +0200</lastBuildDate><atom:link href="https://projectile-man.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Combatiendo fake news con Machine Learning</title>
+      <link>https://projectile-man.github.io/blog/fake-news-ml/fake-news-ml/</link>
+      <pubDate>Sun, 21 Mar 2021 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/fake-news-ml/fake-news-ml/</guid>
+      <description>Cada vez mas personas se unen a esta gran red de usuarios en redes sociales lo que los hace que se encuentren al día en cuanto a las noticias que se difunden a lo largo y ancho del globo terráqueo, las redes sociales han encontrado una manera de hacernos llegar la información al instante, lo que los medios tradicionales no llegan a hacer en algunas ocasiones.</description>
+    </item>
+    
+    <item>
+      <title>Red Neuronal Recurrente - RNN</title>
+      <link>https://projectile-man.github.io/blog/rnn/rnn/</link>
+      <pubDate>Sun, 01 Nov 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/rnn/rnn/</guid>
+      <description>Como parte de ésta secuencia de redes neuronales en este post mostrare la red neuronal recurrente (recurrent neural network) o de forma simplificada RNN, si no has leído los post de las dos primeras arquitecturas anexo el link del red neuronal convolucional y el link del perceptron multicapa.</description>
+    </item>
+    
+    <item>
+      <title>Red Neuronal Convolucional - CNN</title>
+      <link>https://projectile-man.github.io/blog/cnn/cnn/</link>
+      <pubDate>Mon, 21 Sep 2020 16:26:30 -0600</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/cnn/cnn/</guid>
+      <description>Ahora en este post vamos a ver la segunda red neuronal llamada Red Neuronal Convolucional (Convolutional Neural Network), si no has leído el post en que hablo del perceptron multicapa te dejo el link.</description>
+    </item>
+    
+    <item>
+      <title>Introducción a las series de tiempo</title>
+      <link>https://projectile-man.github.io/blog/intro-timeseries/intro-timeseries/</link>
+      <pubDate>Sat, 19 Sep 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/intro-timeseries/intro-timeseries/</guid>
+      <description>Este post será una introducción a las series de tiempo, sus componentes y veremos como descomponerla en sus propiedades.
+Primero que nada debemos de tener en mente qué tipo de datos vamos a tratar antes de realizar cualquier análisis, entre los tipos de datos que podemos tener son: Datos de series de tiempo (Time series data), Datos transversales (Cross-section data), Datos Panel o Datos longitudinales (Panel/Longitudinal Data).</description>
+    </item>
+    
+    <item>
+      <title>Perceptrón multicapa</title>
+      <link>https://projectile-man.github.io/blog/perceptron-multicapa/perceptron-multicapa/</link>
+      <pubDate>Tue, 25 Aug 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/perceptron-multicapa/perceptron-multicapa/</guid>
+      <description>Las redes neuronales artificiales no son una idea nueva en nuestros tiempos, de hecho existen alrededor de los sesentas, con la investigación de Frank Rosenblatt al crear el perceptrón, pero no es hasta el 2011 que empiezan a emerger como una forma de reconocer patrones, y lo que las hace resurgir es el desarrollo tecnológico, abriendo la posibilidad de implementarlas para su uso en la investigación y en la resolución de problemas.</description>
+    </item>
+    
+    <item>
+      <title>Preprocesamiento de Texto NLP</title>
+      <link>https://projectile-man.github.io/blog/preprocesamiento-nlp/preprocesamiento-nlp/</link>
+      <pubDate>Fri, 14 Aug 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/preprocesamiento-nlp/preprocesamiento-nlp/</guid>
+      <description>El procedimiento de conversión de los datos en formato de texto a un formato entendible para la computadora, es decir conversion a números, se llama feature engineering de datos de texto.</description>
+    </item>
+    
+    <item>
+      <title>Exploración de los delitos en la CDMX</title>
+      <link>https://projectile-man.github.io/blog/delitos-exploracion/delitos-exploracion/</link>
+      <pubDate>Mon, 27 Jul 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/delitos-exploracion/delitos-exploracion/</guid>
+      <description>La mayoría de las personas que vivimos en la Ciudad de México hemos sido victimas de la delinciencia o hemos escuchado a una/un amig@, vecin@ que fue afectado por la actividad criminal en la ciudad.</description>
+    </item>
+    
+  </channel>
+</rss>

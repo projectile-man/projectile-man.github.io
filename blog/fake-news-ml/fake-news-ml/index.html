@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.84.4" />
+	
+	<link rel="icon" href="/images/logo.png">
+	
+	<title>Combatiendo fake news con Machine Learning | Alberto Ortiz</title>
+	
+	
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Combatiendo fake news con Machine Learning"/>
+<meta name="twitter:description" content="Cada vez mas personas se unen a esta gran red de usuarios en redes sociales lo que los hace que se encuentren al día en cuanto a las noticias que se difunden a lo largo y ancho del globo terráqueo, las redes sociales han encontrado una manera de hacernos llegar la información al instante, lo que los medios tradicionales no llegan a hacer en algunas ocasiones."/>
+
+	<meta property="og:title" content="Combatiendo fake news con Machine Learning" />
+<meta property="og:description" content="Cada vez mas personas se unen a esta gran red de usuarios en redes sociales lo que los hace que se encuentren al día en cuanto a las noticias que se difunden a lo largo y ancho del globo terráqueo, las redes sociales han encontrado una manera de hacernos llegar la información al instante, lo que los medios tradicionales no llegan a hacer en algunas ocasiones." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://projectile-man.github.io/blog/fake-news-ml/fake-news-ml/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-03-21T11:40:11+02:00" />
+<meta property="article:modified_time" content="2021-03-21T11:40:11+02:00" />
+
+
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+
+	
+	<link rel="stylesheet" href="https://projectile-man.github.io/css/medium.d5cc2020527a039e1334e339e0bc1e2bbd7a463ec0b7279d481b9216bffb4d43.css" integrity="sha256-1cwgIFJ6A54TNOM54LweK716Rj7AtyedSBuSFr/7TUM=">
+
+	
+	<link rel="stylesheet" href="https://projectile-man.github.io/css/additional.8819b6defcdc6d21280f9b402b00df87ca779135901de6c22e708c62e20184b9.css" integrity="sha256-iBm23vzcbSEoD5tAKwDfh8p3kTWQHebCLnCMYuIBhLk=">
+
+	
+	
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container pr-0">
+        
+        <a class="navbar-brand" href="https://projectile-man.github.io/">
+
+            
+            <img src="/images/logo.png" alt="logo">
+            
+        </a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarMediumish">
+            
+            <ul class="navbar-nav ml-auto">
+                 
+                <li class="nav-item ">
+                    <a class="nav-link" href="/blog">Blog</a>
+                </li>
+                 
+                <li class="nav-item ">
+                    <a class="nav-link" href="/">About Me</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+
+        <div class="site-content">   
+            <div class="container">
+<div class="mainheading">
+    <h1 class="sitetitle">Alberto Ortiz</h1>
+    <p class="lead">
+         Hola, soy Alberto y este espacio es para compartir mi experiencia relacionada con el grandioso mundo de los datos.
+    </p>
+</div><div class="main-content">
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-2 pl-0"><div class="share sticky-top sticky-top-offset">
+    
+    
+</div>
+</div>
+                                
+                <div class="col-md-9 flex-first flex-md-unordered">
+                    <div class="mainheading">
+                        	
+                        
+                        
+                        
+                        <div class="row post-top-meta">
+                            <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0 md-nopad-right">
+                                <img class="author-thumb" src="/images/author.png" alt="Alberto Ortiz">
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left md-nopad-left">
+                                <a target="_blank" class="link-dark">Alberto Ortiz</a><br>
+                                <span class="author-description">
+                                    Data Analyst<br>
+                                    <i class="far fa-star"></i>
+                                    Mar 21, 2021
+                                    <i class="far fa-clock clock"></i>
+                                    5 min read
+                                </span>					
+                            </div>
+                        </div>			
+                        	
+                        
+                                                
+                        
+                        <h1 class="posttitle">Combatiendo fake news con Machine Learning</h1> 
+                    </div>
+
+                    
+                    
+                    
+                    
+
+                    
+                    <div class="article-post">
+                        <p><img src="https://drive.google.com//uc?id=1tf9ttFDBdokRwdZNqyrLyymGLSWoHmmj" alt=""></p>
+<p>Cada vez mas personas se unen a esta gran red de usuarios en redes sociales lo que los hace que se encuentren al día en cuanto a las noticias que se difunden a lo largo y ancho del globo terráqueo, las redes sociales han encontrado una manera de hacernos llegar la información al instante, lo que los medios tradicionales no llegan a hacer en algunas ocasiones. De forma diaria se comparten millones de publicaciones, artículos y videos en las diferentes plataformas como Facebook, Twitter y Youtube, por lo que puede ser sencillo encontrarnos una noticia que no sea veraz sin darnos cuenta de ello, así de fácil podemos caer en la trampa.</p>
+<p>Dada la cantidad de información que se comparte día a día es difícil para las plataformas determinar la veracidad de la información. De esta manera se difunde información de proveniencia dudosa o manipulada lo cual puede influir en todas aquellas personas que se toman el tiempo de leerla, creándose una opinión y llevando a tomar decisiones basadas en hechos incorrectos que afectan al entorno social.</p>
+<p>Para disminuir el numero de fake news las plataformas se han hecho de diferentes metodologías para atacar de forma directa la información falsa, una metodología que ha hecho un buen trabajo en este tipo de tareas es el machine learning que si bien no ha erradicado en su totalidad la porción de noticias falsas que rondan en las redes sociales si ha podido disminuir considerablemente la cantidad de dichas noticias, es por ello que en este post les mostrare como combatir fake news y así determinar si una noticia es falsa o verdadera analizando el texto del título y realizando un modelo de machine learning.</p>
+<p>Empezaremos con un pequeño análisis:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+<span style="color:#f92672">%</span>matplotlib inline
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;./data/train.csv&#39;</span>)
+df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>fillna(<span style="color:#e6db74">&#39;&#39;</span>)
+df<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">2</span>)
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1wjpgAYXmwGhayWzOVTbdL8DCNMIAGCav" alt=""></p>
+<p>Podemos notar acerca del datset que tiene cinco campos:</p>
+<ul>
+<li><strong>id</strong>: el identificador único del artículo</li>
+<li><strong>title</strong>: el título que lleva el artículo</li>
+<li><strong>author</strong>: el autor del artículo</li>
+<li><strong>text</strong>: el texto del artículo en donde profundiza mas de qué trata</li>
+<li><strong>label</strong>: etiqueta que denota si es un artículo falso (fake) o no</li>
+</ul>
+<p>La columna label toma dos valores:</p>
+<ul>
+<li><strong>1</strong>: Es una Fake new</li>
+<li><strong>0</strong>: Es una noticia real</li>
+</ul>
+<p>El número de registros que tiene:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df<span style="color:#f92672">.</span>shape
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1LLdh4_w_SbrAVqBZPsbUWsf4SrJuzvyD" alt=""></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#cuantas noticias falsas y verdaderas tenemos</span>
+df[<span style="color:#e6db74">&#39;label&#39;</span>]<span style="color:#f92672">.</span>value_counts()<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bar&#39;</span>)
+</code></pre></div><p><img src="https://drive.google.com//uc?id=19EptXh1_-_5i7irr3lRrKBbDwdJeH53D" alt=""></p>
+<p>Tenemos el mismo número de fake news que las noticias reales.</p>
+<p>Cuántos artículos tenermos por autor:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">news_for_autor <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;author&#39;</span>]<span style="color:#f92672">.</span>value_counts()
+news_for_autor_df <span style="color:#f92672">=</span> news_for_autor<span style="color:#f92672">.</span>to_frame()
+news_for_autor_df <span style="color:#f92672">=</span> news_for_autor_df<span style="color:#f92672">.</span>reset_index()
+news_for_autor_df <span style="color:#f92672">=</span> news_for_autor_df<span style="color:#f92672">.</span>rename(columns <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;author&#39;</span>:<span style="color:#e6db74">&#39;num_news&#39;</span>, <span style="color:#e6db74">&#39;index&#39;</span>: <span style="color:#e6db74">&#39;author&#39;</span>})
+news_for_autor_df
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1eLDN9XUEb9Y9wENlhRltME5gAZWt2k8Y" alt=""></p>
+<p>Cuántos de esos artículos son fake y cuántos no:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">authors <span style="color:#f92672">=</span> list(news_for_autor_df[<span style="color:#e6db74">&#39;author&#39;</span>]<span style="color:#f92672">.</span>unique())
+author_name <span style="color:#f92672">=</span> []
+false_news  <span style="color:#f92672">=</span> []
+true_news   <span style="color:#f92672">=</span> []
+<span style="color:#66d9ef">for</span> author <span style="color:#f92672">in</span> authors:
+    author_news <span style="color:#f92672">=</span> df_train[<span style="color:#e6db74">&#39;label&#39;</span>][df_train[<span style="color:#e6db74">&#39;author&#39;</span>] <span style="color:#f92672">==</span> author]<span style="color:#f92672">.</span>value_counts()
+    author_name<span style="color:#f92672">.</span>append(author)
+    <span style="color:#66d9ef">try</span>:
+        false_news<span style="color:#f92672">.</span>append(author_news<span style="color:#f92672">.</span>loc[<span style="color:#ae81ff">0</span>])
+    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyError</span>:
+        false_news<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">0</span>)
+    <span style="color:#66d9ef">try</span>:
+        true_news<span style="color:#f92672">.</span>append(author_news<span style="color:#f92672">.</span>loc[<span style="color:#ae81ff">1</span>])
+    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyError</span>:
+        true_news<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">0</span>)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fake_news_by_author <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;author&#39;</span>, <span style="color:#e6db74">&#39;num_fake_news&#39;</span>, <span style="color:#e6db74">&#39;num_no_fake_news&#39;</span>])
+fake_news_by_author[<span style="color:#e6db74">&#39;author&#39;</span>]             <span style="color:#f92672">=</span> author_name
+fake_news_by_author[<span style="color:#e6db74">&#39;num_no_fake_news&#39;</span>]   <span style="color:#f92672">=</span> true_news
+fake_news_by_author[<span style="color:#e6db74">&#39;num_fake_news&#39;</span>]      <span style="color:#f92672">=</span> false_news
+fake_news_by_author
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1xdI1Y_nAADmUd8DOS53MphDOeFLz7fNg" alt=""></p>
+<p>En el caso de “Pam Key” postea mucho mas artículos fake que reales.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#quiero graficar cuáles de los autores postean tanto fake news como real news</span>
+fake_news_by_author<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">35</span>)<span style="color:#f92672">.</span>plot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;author&#39;</span>, 
+        kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bar&#39;</span>, 
+        stacked<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, 
+        title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;News by author&#39;</span>)
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1BOwvDtWtHyPzul4g3QcmhkQqECH2iLqP" alt=""></p>
+<p>Se puede observar en la imagen de arriba que hay tres bandos, los que solo publican fake news, los que no (solo publican artículos reales) y aquellos que publican artículos fake y también reales. A primera instancia con esto podemos empezar a discriminar por autor a quienes les podemos cerrar la cuenta ya que publican solo fake news y a los que no publican noticias falsas empezar a seguirlos y consultarlos como fuente real de información.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fake_news_by_author[<span style="color:#e6db74">&#39;total_news&#39;</span>] <span style="color:#f92672">=</span> fake_news_by_author[<span style="color:#e6db74">&#39;num_fake_news&#39;</span>] <span style="color:#f92672">+</span> df5[<span style="color:#e6db74">&#39;num_no_fake_news&#39;</span>]
+</code></pre></div><p>Quiero calcular la tasa de fake news del total de publicaciones que realizan los autores.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fake_news_by_author[<span style="color:#e6db74">&#39;total_news&#39;</span>] <span style="color:#f92672">=</span> fake_news_by_author[<span style="color:#e6db74">&#39;num_fake_news&#39;</span>] <span style="color:#f92672">+</span> fake_news_by_author[<span style="color:#e6db74">&#39;num_no_fake_news&#39;</span>]
+
+fake_news_by_author[<span style="color:#e6db74">&#39;fake_news_rate&#39;</span>] <span style="color:#f92672">=</span> fake_news_by_author[<span style="color:#e6db74">&#39;num_fake_news&#39;</span>] <span style="color:#f92672">/</span> fake_news_by_author[<span style="color:#e6db74">&#39;total_news&#39;</span>]
+
+<span style="color:#75715e">#quitamos los autores que publican solo fake news y los que no, es decir nos quedamos con los que publican ambos tipos de artículos (fake y real)</span>
+fake_news_by_author[(fake_news_by_author[<span style="color:#e6db74">&#39;fake_news_rate&#39;</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">&amp;</span> (fake_news_by_author[<span style="color:#e6db74">&#39;fake_news_rate&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>)]
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1T4GG-0kG7kzqAd0xxgrpotgu3XaY0Ox9" alt=""></p>
+<p>A Pamela Geller se dejo llevar por el momento y publicó una noticia falsa del total de artículos que tiene, en el caso de Ann Coulter publica más fake news que reales, si fueramos los administradores del sistema le estariamos enviando una notificación de cierre de cuenta si sigue publicando fake news al igual que a Reuters y para el caso de Pam Key como ya lo habiamos mencionado anteriormente el cierre de su cuenta es inevitable.</p>
+<p>Una vez realizado un breve análisis del dataset vamos a proceder con la elaboración del modelo de machine learning pero sin antes realizar un preprocesamiento sobre el texto y dejarlo listo para que el modelo lo pueda recibir.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> re
+<span style="color:#f92672">import</span> nltk
+<span style="color:#f92672">from</span> nltk.corpus <span style="color:#f92672">import</span> stopwords
+<span style="color:#f92672">import</span> re
+
+<span style="color:#f92672">from</span> nltk.stem.porter <span style="color:#f92672">import</span> PorterStemmer
+stemmer <span style="color:#f92672">=</span> PorterStemmer()
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">standardized_text</span>(text):
+    text <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[^a-zA-Z]&#39;</span>,<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39; &#39;</span>,str(text))
+    text <span style="color:#f92672">=</span> text<span style="color:#f92672">.</span>lower()
+    text <span style="color:#f92672">=</span> text<span style="color:#f92672">.</span>split()
+    text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">.</span>join(text)
+    
+    <span style="color:#66d9ef">return</span> text<span style="color:#f92672">.</span>strip()
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df[<span style="color:#e6db74">&#39;content&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;title&#39;</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; &#39;</span> <span style="color:#f92672">+</span> df[<span style="color:#e6db74">&#39;author&#39;</span>]
+<span style="color:#75715e">#limpiamos la cadena y la estandarizamos poniendo todo el texto en minuscula</span>
+df[<span style="color:#e6db74">&#39;standardized_text&#39;</span>] <span style="color:#f92672">=</span> [standardized_text(x) <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> df[<span style="color:#e6db74">&#39;content&#39;</span>]]
+
+<span style="color:#75715e">#remove stop words</span>
+stop <span style="color:#f92672">=</span> stopwords<span style="color:#f92672">.</span>words(<span style="color:#e6db74">&#39;english&#39;</span>)
+df[<span style="color:#e6db74">&#39;text_pre&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;standardized_text&#39;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">.</span>join(x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> x<span style="color:#f92672">.</span>split() <span style="color:#66d9ef">if</span> x <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> stop))
+
+<span style="color:#75715e">#Realizamos el procesamiento de stemiar (span-inglishh) el texto</span>
+df[<span style="color:#e6db74">&#39;text_stemmed&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;text_pre&#39;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">.</span>join([stemmer<span style="color:#f92672">.</span>stem(word) <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> x<span style="color:#f92672">.</span>split()]))
+</code></pre></div><p>Y una vez listo el preprocesamiento y extraídas las características más importantes del texto vamos a seguir ahora si con el modelo.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.feature_extraction.text <span style="color:#f92672">import</span> TfidfVectorizer
+<span style="color:#f92672">import</span> sklearn
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn.svm <span style="color:#f92672">import</span> LinearSVC
+<span style="color:#f92672">import</span> pickle
+<span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> accuracy_score 
+<span style="color:#f92672">from</span> sklearn <span style="color:#f92672">import</span> metrics
+<span style="color:#f92672">import</span> json
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#Creamos una funcion con el modelo, en esta ocacion vamos a usar una SVM</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">model_test_SVM</span>(X, y):
+    
+    X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split(X, y, test_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.2</span>, stratify<span style="color:#f92672">=</span>y, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+    
+    vect <span style="color:#f92672">=</span> TfidfVectorizer(max_features<span style="color:#f92672">=</span><span style="color:#ae81ff">50000</span>, ngram_range<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>))
+    X_train_dtm <span style="color:#f92672">=</span> vect<span style="color:#f92672">.</span>fit_transform(X_train)
+    X_test_dtm  <span style="color:#f92672">=</span> vect<span style="color:#f92672">.</span>transform(X_test)
+
+    classifier <span style="color:#f92672">=</span> LinearSVC(class_weight<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;balanced&#39;</span>)
+    classifier<span style="color:#f92672">.</span>fit(X_train_dtm, y_train)
+
+    y_pred_class <span style="color:#f92672">=</span> classifier<span style="color:#f92672">.</span>predict(X_test_dtm)
+    acc <span style="color:#f92672">=</span> metrics<span style="color:#f92672">.</span>accuracy_score(y_test, y_pred_class)
+    print(<span style="color:#e6db74">&#34;Accuracy: &#34;</span>, metrics<span style="color:#f92672">.</span>accuracy_score(y_test, y_pred_class))
+    
+    <span style="color:#66d9ef">return</span> acc, classifier, vect
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df <span style="color:#f92672">=</span> df[[<span style="color:#e6db74">&#39;text_stemmed&#39;</span>, <span style="color:#e6db74">&#39;label&#39;</span>]]
+X_train <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>text_stemmed<span style="color:#f92672">.</span>values
+y_train <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>label<span style="color:#f92672">.</span>values
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#corremos el modelo</span>
+acca, model_SVM, vector_SVM <span style="color:#f92672">=</span> model_test_SVM(X_train, y_train)
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1E_UCqzWwMuKoh79GS11iqIgRLev-KWPc" alt=""></p>
+<p>Y como podemos notar el modelo tiene un muy buen accuracy. Y ya para terminar guardamos el modelo y el vector del vocabulario para que en un futuro lo pongamos en producción.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;./models/01_model_SVM_fake_news.sav&#39;</span>
+pickle<span style="color:#f92672">.</span>dump(model_SVM, open(filename, <span style="color:#e6db74">&#39;wb&#39;</span>))
+pickle<span style="color:#f92672">.</span>dump(vector_SVM<span style="color:#f92672">.</span>vocabulary_,open(<span style="color:#e6db74">&#34;./models/01_vocabulary_SVM_fake_news.pkl&#34;</span>,<span style="color:#e6db74">&#34;wb&#34;</span>))
+</code></pre></div><p>Y con esto terminamos otro ejemplo más aplicado al mundo real, espero les guste y lo pongan en practica, Saludos.</p>
+
+                    </div>
+                    
+                    
+                    <div class="after-post-tags">
+                        <ul class="tags">
+                        
+                        <li>
+                        <a href="/tags/fake-news">fake news</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/python">python</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/machine-learning">machine learning</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/sklearn">sklearn</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/nlp">nlp</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/analisis">analisis</a>
+                        </li>
+                        
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    
+                    
+                        <a class="d-block col-md-6 text-lg-right" href="https://projectile-man.github.io/blog/rnn/rnn/">Red Neuronal Recurrente - RNN &raquo;</a>
+                    
+                    <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+            </div>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                &copy; Copyright Alberto Ortiz - All rights reserved
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+        </div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<script src="https://projectile-man.github.io/js/mediumish.84218587c174fd40bce82544b98851670f0b124a7324b349c54a4065e2b32ffc.js" integrity="sha256-hCGFh8F0/UC86CVEuYhRZw8LEkpzJLNJxUpAZeKzL/w="></script>
+    </body>
+</html>

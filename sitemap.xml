@@ -3,52 +3,121 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://projectile-man.github.io/</loc>
-    <lastmod>2018-10-07T11:40:14+02:00</lastmod>
+    <lastmod>2021-03-21T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/analisis/</loc>
+    <lastmod>2021-03-21T11:40:11+02:00</lastmod>
   </url><url>
     <loc>https://projectile-man.github.io/blog/</loc>
-    <lastmod>2018-10-07T11:40:14+02:00</lastmod>
+    <lastmod>2021-03-21T11:40:11+02:00</lastmod>
   </url><url>
-    <loc>https://projectile-man.github.io/tags/drink/</loc>
-    <lastmod>2018-10-07T11:40:14+02:00</lastmod>
+    <loc>https://projectile-man.github.io/blog/fake-news-ml/fake-news-ml/</loc>
+    <lastmod>2021-03-21T11:40:11+02:00</lastmod>
   </url><url>
-    <loc>https://projectile-man.github.io/tags/interesting/</loc>
-    <lastmod>2018-10-07T11:40:14+02:00</lastmod>
+    <loc>https://projectile-man.github.io/tags/fake-news/</loc>
+    <lastmod>2021-03-21T11:40:11+02:00</lastmod>
   </url><url>
-    <loc>https://projectile-man.github.io/blog/ninth/</loc>
-    <lastmod>2018-10-07T11:40:14+02:00</lastmod>
+    <loc>https://projectile-man.github.io/tags/machine-learning/</loc>
+    <lastmod>2021-03-21T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/nlp/</loc>
+    <lastmod>2021-03-21T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/python/</loc>
+    <lastmod>2021-03-21T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/sklearn/</loc>
+    <lastmod>2021-03-21T11:40:11+02:00</lastmod>
   </url><url>
     <loc>https://projectile-man.github.io/tags/</loc>
-    <lastmod>2018-10-07T11:40:14+02:00</lastmod>
+    <lastmod>2021-03-21T11:40:11+02:00</lastmod>
   </url><url>
-    <loc>https://projectile-man.github.io/blog/eighth/</loc>
-    <lastmod>2018-10-07T11:40:11+02:00</lastmod>
+    <loc>https://projectile-man.github.io/tags/keras/</loc>
+    <lastmod>2020-11-01T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/mnist/</loc>
+    <lastmod>2020-11-01T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/red-neuronal-recurrente/</loc>
+    <lastmod>2020-11-01T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/blog/rnn/rnn/</loc>
+    <lastmod>2020-11-01T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/redes-neuronales/</loc>
+    <lastmod>2020-11-01T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/tensorflow/</loc>
+    <lastmod>2020-11-01T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/cnn/</loc>
+    <lastmod>2020-09-21T16:26:30-06:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/convolucion/</loc>
+    <lastmod>2020-09-21T16:26:30-06:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/blog/cnn/cnn/</loc>
+    <lastmod>2020-09-21T16:26:30-06:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/blog/intro-timeseries/intro-timeseries/</loc>
+    <lastmod>2020-09-19T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/scipy/</loc>
+    <lastmod>2020-09-19T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/series-de-tiempo/</loc>
+    <lastmod>2020-09-19T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/timeseries/</loc>
+    <lastmod>2020-09-19T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/blog/perceptron-multicapa/perceptron-multicapa/</loc>
+    <lastmod>2020-08-25T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/n-gram/</loc>
+    <lastmod>2020-08-14T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/natural-languaje-processing/</loc>
+    <lastmod>2020-08-14T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/blog/preprocesamiento-nlp/preprocesamiento-nlp/</loc>
+    <lastmod>2020-08-14T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/tf-idf/</loc>
+    <lastmod>2020-08-14T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/exploracion/</loc>
+    <lastmod>2020-07-29T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/pyspark/</loc>
+    <lastmod>2020-07-29T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/retail/</loc>
+    <lastmod>2020-07-29T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/blog/productos-vendidos/productos-vendidos/</loc>
+    <lastmod>2020-07-29T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/cdmx/</loc>
+    <lastmod>2020-07-27T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/crimen/</loc>
+    <lastmod>2020-07-27T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/tags/delitos/</loc>
+    <lastmod>2020-07-27T11:40:11+02:00</lastmod>
+  </url><url>
+    <loc>https://projectile-man.github.io/blog/delitos-exploracion/delitos-exploracion/</loc>
+    <lastmod>2020-07-27T11:40:11+02:00</lastmod>
   </url><url>
     <loc>https://projectile-man.github.io/portafolio/eighth/</loc>
     <lastmod>2018-10-07T11:40:11+02:00</lastmod>
   </url><url>
-    <loc>https://projectile-man.github.io/portafolio/</loc>
+    <loc>https://projectile-man.github.io/tags/interesting/</loc>
     <lastmod>2018-10-07T11:40:11+02:00</lastmod>
   </url><url>
-    <loc>https://projectile-man.github.io/blog/seventh/</loc>
-    <lastmod>2018-10-07T11:39:29+02:00</lastmod>
-  </url><url>
-    <loc>https://projectile-man.github.io/blog/sixth/</loc>
-    <lastmod>2018-10-07T11:39:25+02:00</lastmod>
-  </url><url>
-    <loc>https://projectile-man.github.io/blog/fifth/</loc>
-    <lastmod>2018-10-07T11:39:22+02:00</lastmod>
-  </url><url>
-    <loc>https://projectile-man.github.io/blog/fourth/</loc>
-    <lastmod>2018-10-07T11:39:16+02:00</lastmod>
-  </url><url>
-    <loc>https://projectile-man.github.io/blog/third/</loc>
-    <lastmod>2018-10-07T11:39:13+02:00</lastmod>
-  </url><url>
-    <loc>https://projectile-man.github.io/blog/second/</loc>
-    <lastmod>2018-10-07T11:39:10+02:00</lastmod>
-  </url><url>
-    <loc>https://projectile-man.github.io/blog/my-first-post/</loc>
-    <lastmod>2018-10-07T11:17:14+02:00</lastmod>
+    <loc>https://projectile-man.github.io/portafolio/</loc>
+    <lastmod>2018-10-07T11:40:11+02:00</lastmod>
   </url><url>
     <loc>https://projectile-man.github.io/categories/</loc>
   </url>

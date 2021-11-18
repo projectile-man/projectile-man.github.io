@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CNN on Alberto Ortiz</title>
+    <link>https://projectile-man.github.io/tags/cnn/</link>
+    <description>Recent content in CNN on Alberto Ortiz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alberto Ortiz - All rights reserved</copyright>
+    <lastBuildDate>Mon, 21 Sep 2020 16:26:30 -0600</lastBuildDate><atom:link href="https://projectile-man.github.io/tags/cnn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Red Neuronal Convolucional - CNN</title>
+      <link>https://projectile-man.github.io/blog/cnn/cnn/</link>
+      <pubDate>Mon, 21 Sep 2020 16:26:30 -0600</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/cnn/cnn/</guid>
+      <description>Ahora en este post vamos a ver la segunda red neuronal llamada Red Neuronal Convolucional (Convolutional Neural Network), si no has leído el post en que hablo del perceptron multicapa te dejo el link.</description>
+    </item>
+    
+  </channel>
+</rss>

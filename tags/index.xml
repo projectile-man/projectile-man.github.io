@@ -7,20 +7,236 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Alberto Ortiz - All rights reserved</copyright>
-    <lastBuildDate>Sun, 07 Oct 2018 11:40:14 +0200</lastBuildDate><atom:link href="https://projectile-man.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Mar 2021 11:40:11 +0200</lastBuildDate><atom:link href="https://projectile-man.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>drink</title>
-      <link>https://projectile-man.github.io/tags/drink/</link>
-      <pubDate>Sun, 07 Oct 2018 11:40:14 +0200</pubDate>
+      <title>analisis</title>
+      <link>https://projectile-man.github.io/tags/analisis/</link>
+      <pubDate>Sun, 21 Mar 2021 11:40:11 +0200</pubDate>
       
-      <guid>https://projectile-man.github.io/tags/drink/</guid>
+      <guid>https://projectile-man.github.io/tags/analisis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fake news</title>
+      <link>https://projectile-man.github.io/tags/fake-news/</link>
+      <pubDate>Sun, 21 Mar 2021 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/fake-news/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine learning</title>
+      <link>https://projectile-man.github.io/tags/machine-learning/</link>
+      <pubDate>Sun, 21 Mar 2021 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nlp</title>
+      <link>https://projectile-man.github.io/tags/nlp/</link>
+      <pubDate>Sun, 21 Mar 2021 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/nlp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://projectile-man.github.io/tags/python/</link>
+      <pubDate>Sun, 21 Mar 2021 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sklearn</title>
+      <link>https://projectile-man.github.io/tags/sklearn/</link>
+      <pubDate>Sun, 21 Mar 2021 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/sklearn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>keras</title>
+      <link>https://projectile-man.github.io/tags/keras/</link>
+      <pubDate>Sun, 01 Nov 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/keras/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MNIST</title>
+      <link>https://projectile-man.github.io/tags/mnist/</link>
+      <pubDate>Sun, 01 Nov 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/mnist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>red neuronal recurrente</title>
+      <link>https://projectile-man.github.io/tags/red-neuronal-recurrente/</link>
+      <pubDate>Sun, 01 Nov 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/red-neuronal-recurrente/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>redes neuronales</title>
+      <link>https://projectile-man.github.io/tags/redes-neuronales/</link>
+      <pubDate>Sun, 01 Nov 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/redes-neuronales/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tensorflow</title>
+      <link>https://projectile-man.github.io/tags/tensorflow/</link>
+      <pubDate>Sun, 01 Nov 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/tensorflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CNN</title>
+      <link>https://projectile-man.github.io/tags/cnn/</link>
+      <pubDate>Mon, 21 Sep 2020 16:26:30 -0600</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/cnn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>convolucion</title>
+      <link>https://projectile-man.github.io/tags/convolucion/</link>
+      <pubDate>Mon, 21 Sep 2020 16:26:30 -0600</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/convolucion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scipy</title>
+      <link>https://projectile-man.github.io/tags/scipy/</link>
+      <pubDate>Sat, 19 Sep 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/scipy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>series de tiempo</title>
+      <link>https://projectile-man.github.io/tags/series-de-tiempo/</link>
+      <pubDate>Sat, 19 Sep 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/series-de-tiempo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>timeseries</title>
+      <link>https://projectile-man.github.io/tags/timeseries/</link>
+      <pubDate>Sat, 19 Sep 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/timeseries/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>n-gram</title>
+      <link>https://projectile-man.github.io/tags/n-gram/</link>
+      <pubDate>Fri, 14 Aug 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/n-gram/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>natural languaje processing</title>
+      <link>https://projectile-man.github.io/tags/natural-languaje-processing/</link>
+      <pubDate>Fri, 14 Aug 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/natural-languaje-processing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tf-idf</title>
+      <link>https://projectile-man.github.io/tags/tf-idf/</link>
+      <pubDate>Fri, 14 Aug 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/tf-idf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>exploracion</title>
+      <link>https://projectile-man.github.io/tags/exploracion/</link>
+      <pubDate>Wed, 29 Jul 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/exploracion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pyspark</title>
+      <link>https://projectile-man.github.io/tags/pyspark/</link>
+      <pubDate>Wed, 29 Jul 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/pyspark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>retail</title>
+      <link>https://projectile-man.github.io/tags/retail/</link>
+      <pubDate>Wed, 29 Jul 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/retail/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CDMX</title>
+      <link>https://projectile-man.github.io/tags/cdmx/</link>
+      <pubDate>Mon, 27 Jul 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/cdmx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>crimen</title>
+      <link>https://projectile-man.github.io/tags/crimen/</link>
+      <pubDate>Mon, 27 Jul 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/crimen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>delitos</title>
+      <link>https://projectile-man.github.io/tags/delitos/</link>
+      <pubDate>Mon, 27 Jul 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/tags/delitos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>interesting</title>
       <link>https://projectile-man.github.io/tags/interesting/</link>
-      <pubDate>Sun, 07 Oct 2018 11:40:14 +0200</pubDate>
+      <pubDate>Sun, 07 Oct 2018 11:40:11 +0200</pubDate>
       
       <guid>https://projectile-man.github.io/tags/interesting/</guid>
       <description></description>

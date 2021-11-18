@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>retail on Alberto Ortiz</title>
+    <link>https://projectile-man.github.io/tags/retail/</link>
+    <description>Recent content in retail on Alberto Ortiz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alberto Ortiz - All rights reserved</copyright>
+    <lastBuildDate>Wed, 29 Jul 2020 11:40:11 +0200</lastBuildDate><atom:link href="https://projectile-man.github.io/tags/retail/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>¿Qué productos se venden más en los supermercados en México? Análisis con Spark</title>
+      <link>https://projectile-man.github.io/blog/productos-vendidos/productos-vendidos/</link>
+      <pubDate>Wed, 29 Jul 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/productos-vendidos/productos-vendidos/</guid>
+      <description>El conocer a nuestros consumidores la mayoría de las veces es de gran relevancia para las empresas ya que logran obtener datos de los productos que más venden, logrando con esto mantener sus almacenes con los productos en existencia.</description>
+    </item>
+    
+  </channel>
+</rss>

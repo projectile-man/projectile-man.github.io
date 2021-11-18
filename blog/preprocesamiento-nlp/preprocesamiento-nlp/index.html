@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.84.4" />
+	
+	<link rel="icon" href="/images/logo.png">
+	
+	<title>Preprocesamiento de Texto NLP | Alberto Ortiz</title>
+	
+	
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Preprocesamiento de Texto NLP"/>
+<meta name="twitter:description" content="El procedimiento de conversión de los datos en formato de texto a un formato entendible para la computadora, es decir conversion a números, se llama feature engineering de datos de texto."/>
+
+	<meta property="og:title" content="Preprocesamiento de Texto NLP" />
+<meta property="og:description" content="El procedimiento de conversión de los datos en formato de texto a un formato entendible para la computadora, es decir conversion a números, se llama feature engineering de datos de texto." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://projectile-man.github.io/blog/preprocesamiento-nlp/preprocesamiento-nlp/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2020-08-14T11:40:11+02:00" />
+<meta property="article:modified_time" content="2020-08-14T11:40:11+02:00" />
+
+
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+
+	
+	<link rel="stylesheet" href="https://projectile-man.github.io/css/medium.d5cc2020527a039e1334e339e0bc1e2bbd7a463ec0b7279d481b9216bffb4d43.css" integrity="sha256-1cwgIFJ6A54TNOM54LweK716Rj7AtyedSBuSFr/7TUM=">
+
+	
+	<link rel="stylesheet" href="https://projectile-man.github.io/css/additional.8819b6defcdc6d21280f9b402b00df87ca779135901de6c22e708c62e20184b9.css" integrity="sha256-iBm23vzcbSEoD5tAKwDfh8p3kTWQHebCLnCMYuIBhLk=">
+
+	
+	
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container pr-0">
+        
+        <a class="navbar-brand" href="https://projectile-man.github.io/">
+
+            
+            <img src="/images/logo.png" alt="logo">
+            
+        </a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarMediumish">
+            
+            <ul class="navbar-nav ml-auto">
+                 
+                <li class="nav-item ">
+                    <a class="nav-link" href="/blog">Blog</a>
+                </li>
+                 
+                <li class="nav-item ">
+                    <a class="nav-link" href="/">About Me</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+
+        <div class="site-content">   
+            <div class="container">
+<div class="mainheading">
+    <h1 class="sitetitle">Alberto Ortiz</h1>
+    <p class="lead">
+         Hola, soy Alberto y este espacio es para compartir mi experiencia relacionada con el grandioso mundo de los datos.
+    </p>
+</div><div class="main-content">
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-2 pl-0"><div class="share sticky-top sticky-top-offset">
+    
+    
+</div>
+</div>
+                                
+                <div class="col-md-9 flex-first flex-md-unordered">
+                    <div class="mainheading">
+                        	
+                        
+                        
+                        
+                        <div class="row post-top-meta">
+                            <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0 md-nopad-right">
+                                <img class="author-thumb" src="/images/author.png" alt="Alberto Ortiz">
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left md-nopad-left">
+                                <a target="_blank" class="link-dark">Alberto Ortiz</a><br>
+                                <span class="author-description">
+                                    Data Analyst<br>
+                                    <i class="far fa-star"></i>
+                                    Aug 14, 2020
+                                    <i class="far fa-clock clock"></i>
+                                    5 min read
+                                </span>					
+                            </div>
+                        </div>			
+                        	
+                        
+                                                
+                        
+                        <h1 class="posttitle">Preprocesamiento de Texto NLP</h1> 
+                    </div>
+
+                    
+                    
+                    
+                    
+
+                    
+                    <div class="article-post">
+                        <p><img src="https://drive.google.com//uc?id=1aL8JsfTi1hj-vb9ZMnqEm2yUoel-99w-" alt=""></p>
+<p>El procedimiento de conversión de los datos en formato de texto a un formato entendible para la computadora, es decir conversion a números, se llama feature engineering de datos de texto. El entendimiento del texto o lenguaje humano para las computadoras es un tema que hoy en día se vuelve más frecuente, desde la clasificación de textos hasta la traducción de un idioma a otro.</p>
+<p>Para lograr los antes mencionado es necesario contar con herramientas que nos permitan pasar de texto a una estructura que la máquina pueda entender. En este post veremos diferentes métodos de ingeniería de caracteristicas, analizaremos sus funcionalidades, sus ventajas, desventajas y algunos ejemplos.</p>
+<h2 id="conversión-del-texto-a-features-usando-one-hot-encoding">Conversión del texto a features usando One Hot Encoding</h2>
+<p>One Hot Encoding es un proceso que convierte variables categóricas a una matriz con vectores de ceros y unos.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+cadena1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;la ciencia de datos es genial&#39;</span>
+pd<span style="color:#f92672">.</span>get_dummies(cadena1<span style="color:#f92672">.</span>split())
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1upRTLNpA1_vOQsPm27dDvvtSbNdXF5CR" alt=""></p>
+<p>Otro ejemplo.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cadena2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;compre un libro de ciencia de datos&#39;</span>
+pd<span style="color:#f92672">.</span>get_dummies(cadena2<span style="color:#f92672">.</span>split())
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1f5Ei5TPmTaqVwRk54FHcVKsZvQ1pWpV7" alt=""></p>
+<p>La desventaja de este método radica en que no contempla la frecuencia de las palabras, si una palabra aparece múltiples veces hay una posibilidad de perder la información si no está incluido en el análisis, como se puede observar en la conversion de la cadena2 la palabra ‘de’ aparece dos veces.</p>
+<h2 id="conversión-del-texto-a-features-usando-count-vectorizing">Conversión del texto a features usando Count Vectorizing</h2>
+<p>El count vectorizing es similar a One Hot Encoding, la diferencia es que count vectorizing verifica si una palabra en particular aparece varias veces en el texto y las cuenta.</p>
+<p><img src="https://drive.google.com//uc?id=1MJAPRe76I9oDM9AIOj-Fl4_TKA2KsySv" alt=""></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.feature_extraction.text <span style="color:#f92672">import</span> CountVectorizer
+<span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">texto <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;El fin de la ciencia especulativa es la verdad, y el fin de la ciencia práctica es la acción&#34;</span>]
+vectorizer <span style="color:#f92672">=</span> CountVectorizer()
+vectorizer<span style="color:#f92672">.</span>fit(texto)
+vector <span style="color:#f92672">=</span> vectorizer<span style="color:#f92672">.</span>transform(texto)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(vectorizer<span style="color:#f92672">.</span>vocabulary_<span style="color:#f92672">.</span>items(), columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;word&#39;</span>, <span style="color:#e6db74">&#39;index&#39;</span>])<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;index&#39;</span>)<span style="color:#f92672">.</span>sort_index()
+df[<span style="color:#e6db74">&#39;Count&#39;</span>] <span style="color:#f92672">=</span> vector<span style="color:#f92672">.</span>toarray()[<span style="color:#ae81ff">0</span>]
+df
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1-NO0xWrEQQmi8IdjcXJahoyJRgqb4niP" alt=""></p>
+<p>La desventaja de este método es que no considera las palabras previas así como las palabras siguientes para obtener un significado de las palabras más acertado.</p>
+<h2 id="generación-de-n-grams">Generación de N-grams</h2>
+<p>N-grams es la fusión de múltiples letras o de múltiples palabras. Se forman de tal manera que las palabras previas y siguientes se capturan.</p>
+<ul>
+<li>Unigramas son las palabras únicas presentadas en una oración.</li>
+<li>Bigramas es la combinación de 2 palabras.</li>
+<li>Trigramas es la combinación de 3 palabras.</li>
+<li>Etc.</li>
+</ul>
+<p>Por ejemplo:</p>
+<p>“El NLP es increible”</p>
+<ul>
+<li><strong>Unigrama</strong>: [“El”, “NLP”, “es”, “increible”]</li>
+<li><strong>Bigramas</strong>: [“El NLP”, “NLP es”, “es increible”]</li>
+<li><strong>Trigramas</strong>: [“El NLP es”, “NLP es increible”]</li>
+<li><strong>Quadgramas</strong>: [“El NLP es increible”]</li>
+</ul>
+<p>Vamos con el ejemplo en Python</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> textblob <span style="color:#f92672">import</span> TextBlob
+cadena <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;La ciencia de hoy en día es la tecnología del mañana&#34;</span>
+</code></pre></div><p>Unigramas</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">TextBlob(cadena)<span style="color:#f92672">.</span>ngrams(<span style="color:#ae81ff">1</span>)
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1bg2uYRq2PWpKXEBCzKS_Wg3zbAn4DkTx" alt=""></p>
+<p>Bigramas</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">TextBlob(cadena)<span style="color:#f92672">.</span>ngrams(<span style="color:#ae81ff">2</span>)
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1oDc4OYR7gYFIyd4s48FLrTVVrtvMwV5o" alt=""></p>
+<h2 id="características-basadas-en-bigramas-para-un-documento">Características basadas en bigramas para un documento</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.feature_extraction.text <span style="color:#f92672">import</span> CountVectorizer
+
+texto <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;El fin de la ciencia especulativa es la verdad, y el fin de la ciencia práctica es la acción&#34;</span>]
+
+<span style="color:#75715e">#Creación de la tranformación con bigramas</span>
+vectorizer <span style="color:#f92672">=</span> CountVectorizer(ngram_range<span style="color:#f92672">=</span>(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>))
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">vectorizer<span style="color:#f92672">.</span>fit(texto)
+vector <span style="color:#f92672">=</span> vectorizer<span style="color:#f92672">.</span>transform(texto)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(vectorizer<span style="color:#f92672">.</span>vocabulary_<span style="color:#f92672">.</span>items(), columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;bigrams&#39;</span>, <span style="color:#e6db74">&#39;index&#39;</span>])<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;index&#39;</span>)<span style="color:#f92672">.</span>sort_index()
+df[<span style="color:#e6db74">&#39;Count&#39;</span>] <span style="color:#f92672">=</span> vector<span style="color:#f92672">.</span>toarray()[<span style="color:#ae81ff">0</span>]
+df
+</code></pre></div><p><img src="https://drive.google.com//uc?id=16NFHi6MB5_oZXNFCbdr2hk-AsZHA08fJ" alt=""></p>
+<p>Los métodos antes mencionados tiene una desventaja muy marcada la cual es, si aparece una palabra en particular en todos los documentos del corpus, entonces dicha palanra alcanzará una mayor importancia. Eso es malo para nuestro análisis.</p>
+<h2 id="conversión-de-texto-en-features-usando-tf-idf">Conversión de texto en features usando TF-IDF</h2>
+<p>La idea del TF-IDF es observar la importancia de una palabra en un documento que pertenece a una colección y, por lo tanto, las palabras normalizadoras aparecen con frecuencia en todos los documentos.</p>
+<p><strong>TF (Term frecuency – termino frecuente)</strong>: la frecuencia del término es simplemente la relación entre el número de veces que una palabra está presente en una oración y la longitud de la oración. TF básicamente está capturando la importancia de la palabra independientemente de la longitud del documento. Por ejemplo, una palabra con la frecuencia de 3 con la longitud de la oración de 10 no es lo mismo que cuando la longitud de la palabra de la oración es de 100 palabras. Debería cobrar más importancia en el primer escenario.</p>
+<p><strong>IDF (Inverse Document Frequency – Frecuencia de documento inversa)</strong>: el IDF de cada palabra es el logaritmo de la relación entre el número total de filas y el número de filas en un documento en particular en el que está presente esa palabra.</p>
+<p>IDF = log (N / n), donde N es el número total de filas y n es el número de filas en las que estaba presente la palabra. La IDF medirá la rareza de un término. Palabras como “a” y “el” aparecen en todos los documentos del corpus, pero las palabras raras no estarán en todos los documentos. Entonces, si una palabra aparece en casi todos los documentos, entonces esa palabra no nos sirve, ya que no ayuda a clasificar ni a recuperar información. La IDF anularán este problema.</p>
+<p>TF-IDF es el producto simple de TF e IDF de modo que ambos abordan los inconvenientes, lo que hace que las predicciones y la recuperación de información sean relevantes.</p>
+<p>Vamos con el ejemplo.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.feature_extraction.text <span style="color:#f92672">import</span> TfidfVectorizer
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">texto <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;El fin de la ciencia especulativa es la verdad, y el fin de la ciencia práctica es la acción&#34;</span>,
+         <span style="color:#e6db74">&#34;La ciencia de hoy en día es la tecnología del mañana&#34;</span>,
+         <span style="color:#e6db74">&#34;la ciencia de datos es genial&#34;</span>]
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">vectorizer <span style="color:#f92672">=</span> TfidfVectorizer()
+vectorizer<span style="color:#f92672">.</span>fit(texto)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(vectorizer<span style="color:#f92672">.</span>vocabulary_<span style="color:#f92672">.</span>items(), columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;word&#39;</span>, <span style="color:#e6db74">&#39;index&#39;</span>])<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;index&#39;</span>)<span style="color:#f92672">.</span>sort_index()
+df[<span style="color:#e6db74">&#39;importancia&#39;</span>] <span style="color:#f92672">=</span> vectorizer<span style="color:#f92672">.</span>idf_
+df<span style="color:#f92672">.</span>sort_values(by<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;importancia&#39;</span>], inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, ascending<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+df
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1kU_fBp6pyeYtv7bAh1fqqB33_nmGonp6" alt=""></p>
+<p>Observamos en los resultados que las palabras “de”, “la”, “ciencia” y “es” aparecen en los tres textos por lo tanto la importancia para dichas palabras no es mucha. A diferencia de todas de demás palabras que contienen una importancia mayor.</p>
+<p>Todos los métodos o técnicas que hemos analizado hasta ahora se basan en la frecuencia y, por lo tanto, se denominan embedding o features basadas en la frecuencia.</p>
+
+                    </div>
+                    
+                    
+                    <div class="after-post-tags">
+                        <ul class="tags">
+                        
+                        <li>
+                        <a href="/tags/nlp">nlp</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/natural-languaje-processing">natural languaje processing</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/python">python</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/n-gram">n-gram</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/tf-idf">tf-idf</a>
+                        </li>
+                        
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    
+                        <a class="d-block col-md-6" href="https://projectile-man.github.io/blog/perceptron-multicapa/perceptron-multicapa/"> &laquo; Perceptrón multicapa</a>
+                    
+                    
+                        <a class="d-block col-md-6 text-lg-right" href="https://projectile-man.github.io/blog/productos-vendidos/productos-vendidos/">¿Qué productos se venden más en los supermercados en México? Análisis con Spark &raquo;</a>
+                    
+                    <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+            </div>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                &copy; Copyright Alberto Ortiz - All rights reserved
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+        </div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<script src="https://projectile-man.github.io/js/mediumish.84218587c174fd40bce82544b98851670f0b124a7324b349c54a4065e2b32ffc.js" integrity="sha256-hCGFh8F0/UC86CVEuYhRZw8LEkpzJLNJxUpAZeKzL/w="></script>
+    </body>
+</html>

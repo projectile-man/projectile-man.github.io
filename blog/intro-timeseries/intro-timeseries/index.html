@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.84.4" />
+	
+	<link rel="icon" href="/images/logo.png">
+	
+	<title>Introducción a las series de tiempo | Alberto Ortiz</title>
+	
+	
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Introducción a las series de tiempo"/>
+<meta name="twitter:description" content="Este post será una introducción a las series de tiempo, sus componentes y veremos como descomponerla en sus propiedades.
+Primero que nada debemos de tener en mente qué tipo de datos vamos a tratar antes de realizar cualquier análisis, entre los tipos de datos que podemos tener son: Datos de series de tiempo (Time series data), Datos transversales (Cross-section data), Datos Panel o Datos longitudinales (Panel/Longitudinal Data)."/>
+
+	<meta property="og:title" content="Introducción a las series de tiempo" />
+<meta property="og:description" content="Este post será una introducción a las series de tiempo, sus componentes y veremos como descomponerla en sus propiedades.
+Primero que nada debemos de tener en mente qué tipo de datos vamos a tratar antes de realizar cualquier análisis, entre los tipos de datos que podemos tener son: Datos de series de tiempo (Time series data), Datos transversales (Cross-section data), Datos Panel o Datos longitudinales (Panel/Longitudinal Data)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://projectile-man.github.io/blog/intro-timeseries/intro-timeseries/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2020-09-19T11:40:11+02:00" />
+<meta property="article:modified_time" content="2020-09-19T11:40:11+02:00" />
+
+
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+
+	
+	<link rel="stylesheet" href="https://projectile-man.github.io/css/medium.d5cc2020527a039e1334e339e0bc1e2bbd7a463ec0b7279d481b9216bffb4d43.css" integrity="sha256-1cwgIFJ6A54TNOM54LweK716Rj7AtyedSBuSFr/7TUM=">
+
+	
+	<link rel="stylesheet" href="https://projectile-man.github.io/css/additional.8819b6defcdc6d21280f9b402b00df87ca779135901de6c22e708c62e20184b9.css" integrity="sha256-iBm23vzcbSEoD5tAKwDfh8p3kTWQHebCLnCMYuIBhLk=">
+
+	
+	
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container pr-0">
+        
+        <a class="navbar-brand" href="https://projectile-man.github.io/">
+
+            
+            <img src="/images/logo.png" alt="logo">
+            
+        </a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarMediumish">
+            
+            <ul class="navbar-nav ml-auto">
+                 
+                <li class="nav-item ">
+                    <a class="nav-link" href="/blog">Blog</a>
+                </li>
+                 
+                <li class="nav-item ">
+                    <a class="nav-link" href="/">About Me</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+
+        <div class="site-content">   
+            <div class="container">
+<div class="mainheading">
+    <h1 class="sitetitle">Alberto Ortiz</h1>
+    <p class="lead">
+         Hola, soy Alberto y este espacio es para compartir mi experiencia relacionada con el grandioso mundo de los datos.
+    </p>
+</div><div class="main-content">
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-2 pl-0"><div class="share sticky-top sticky-top-offset">
+    
+    
+</div>
+</div>
+                                
+                <div class="col-md-9 flex-first flex-md-unordered">
+                    <div class="mainheading">
+                        	
+                        
+                        
+                        
+                        <div class="row post-top-meta">
+                            <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0 md-nopad-right">
+                                <img class="author-thumb" src="/images/author.png" alt="Alberto Ortiz">
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left md-nopad-left">
+                                <a target="_blank" class="link-dark">Alberto Ortiz</a><br>
+                                <span class="author-description">
+                                    Data Analyst<br>
+                                    <i class="far fa-star"></i>
+                                    Sep 19, 2020
+                                    <i class="far fa-clock clock"></i>
+                                    6 min read
+                                </span>					
+                            </div>
+                        </div>			
+                        	
+                        
+                                                
+                        
+                        <h1 class="posttitle">Introducción a las series de tiempo</h1> 
+                    </div>
+
+                    
+                    
+                    
+                    
+
+                    
+                    <div class="article-post">
+                        <p><img src="https://drive.google.com//uc?id=10RLIPIETkWoKKv5bit0r2mPLWshbXPYs" alt=""></p>
+<p>Este post será una introducción a las series de tiempo, sus componentes y veremos como descomponerla en sus propiedades.</p>
+<p>Primero que nada debemos de tener en mente qué tipo de datos vamos a tratar antes de realizar cualquier análisis, entre los tipos de datos que podemos tener son: Datos de series de tiempo (Time series data), Datos transversales (Cross-section data), Datos Panel o Datos longitudinales (Panel/Longitudinal Data).</p>
+<h3 id="datos-de-series-de-tiempo">Datos de series de tiempo</h3>
+<p>Por serie de tiempo nos referimos a datos que se recopilan en intervalos de tiempo, dichos intervalos de tiempo pueden ser de forma diaria, semanal, mensual, o incluso de segundos. Una serie de tiempo que incorpora los registros de una sola variable es llamada un serie de tiempo univariante y una serie de tiempo que tiene más de una variable es llamada serie de tiempo multivariante. Una serie de tiempo se puede designar de dos maneras: continua o discreta.</p>
+<p>En una serie de tiempo continua la observación de los datos se lleva a cabo de forma continua a lo largo de un período, por ejemplo, datos de un sismógrafo.</p>
+<p>En una serie de tiempo discreta, la observación de los datos se lleva a cabo en un momento específico como por ejemplo en el aumento o disminución de la temperatura, tipos de cambio de divisas o datos de presión atmosférica.</p>
+<h3 id="datos-transversales-cross-section-data">Datos transversales (Cross-section data)</h3>
+<p>Los datos transversales son datos recopilados en un momento específico, como los precios de cierre de un grupo particular de acciones en una fecha específica, las encuestas de opinión de las elecciones, el nivel de obesidad en la población.</p>
+<h3 id="datos-panel-o-datos-longitudinales-panellongitudinal-data">Datos Panel o Datos longitudinales (Panel/Longitudinal Data)</h3>
+<p>Los datos de panel / datos longitudinales contienen observaciones de los mismos individuos recopiladas durante varios períodos de tiempo. Son datos que se determinan periódicamente por el número de observaciones en unidades de datos transversales, como individuos, empresas o agencias gubernamentales.</p>
+<h2 id="tendencia">Tendencia</h2>
+<p>Una tendencia es un patrón que se observa durante un período de tiempo y representa la tasa media de cambio con respecto al tiempo. Una tendencia generalmente muestra la propensión de los datos a aumentar o disminuir durante el largo plazo. Por ejemplo, el un aumento o disminución de precios de las acciones, el gas, el diésel, etc., o sobre la tasa de interés de los bancos o préstamos hipotecarios.</p>
+<h3 id="detectar-la-tendencia-usando-el-filtro-hodrick-prescott">Detectar la tendencia usando el filtro Hodrick-Prescott</h3>
+<p>El filtro de Hodrick-Prescott (HP) se ha vuelto en un punto de referencia para eliminar los movimientos de tendencia en los datos. Es una técnica no paramétrica y como todos los métodos no paramétricos depende de un parámetro de ajuste que controla el grado de suavizado. Este método se emplea ampliamente en macro economía.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+<span style="color:#f92672">from</span> statsmodels.tsa.filters.hp_filter <span style="color:#f92672">import</span> hpfilter
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+
+file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;./data/India_Exchange_Rate_Dataset.xls&#39;</span>
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_excel(file, index_col<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, parse_dates<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+df<span style="color:#f92672">.</span>head()
+</code></pre></div><p><img src="https://drive.google.com//uc?id=17_HDdGz_HPLVPJ1XblYVMKcrDs0J2f2J" alt=""></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ciclo, datos_tendencia <span style="color:#f92672">=</span> hpfilter(datos[<span style="color:#e6db74">&#39;EXINUS&#39;</span>], lamb<span style="color:#f92672">=</span><span style="color:#ae81ff">1600</span>)
+datos_tendencia<span style="color:#f92672">.</span>plot(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">6</span>))<span style="color:#f92672">.</span>autoscale(axis<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;x&#39;</span>,tight<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1Lbo2uKgSBkQkuRhTK8i2CSNuWbCAkZmy" alt=""></p>
+<p>Muestra una propensión de los datos a aumentar.</p>
+<h3 id="eliminación-de-la-tendencia">Eliminación de la tendencia</h3>
+<p>Para remover la tendencia de la series de tiempo recurrimos a métodos como por ejemplo pandas differencing, scipy signal o el filtro HP. La identificación, el modelado e incluso la eliminación de la tendencia en la serie de tiempo puede ser beneficioso.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_excel(file,index_col<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,parse_dates<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+diff <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>EXINUS<span style="color:#f92672">.</span>diff()
+plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">6</span>))
+plt<span style="color:#f92672">.</span>plot(diff)
+plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;Eliminación de tendencia usando diferenciación&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>)
+plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;AÑOS&#39;</span>)
+plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;CAMBIO&#39;</span>)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p><img src="https://drive.google.com//uc?id=163VLP_jzR8en-yj8ektaH63m-aGbD96M" alt=""></p>
+<h3 id="eliminación-con-scipy">Eliminación con scipy</h3>
+<p>Una señal es un tipo de serie de tiempo, usando scipy se puede eliminar la tendencia lineal de los datos de la señal.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> signal
+
+detrended <span style="color:#f92672">=</span> signal<span style="color:#f92672">.</span>detrend(df<span style="color:#f92672">.</span>EXINUS<span style="color:#f92672">.</span>values)
+plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">6</span>))
+plt<span style="color:#f92672">.</span>plot(detrended)
+plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;DATOS&#39;</span>)
+plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;FRECUENCIA&#39;</span>)
+plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;Eliminación de tendencia usando Scipy Signal&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1mOmyk6JWfvM08FlLQnAUOWXHr-PW7xUU" alt=""></p>
+<h3 id="eliminación-con-el-filtro-hp">Eliminación con el filtro HP</h3>
+<p>También se utiliza un filtro HP para reducir la tendencia de una serie temporal y suavizar los datos. Se utiliza para eliminar fluctuaciones a corto plazo. Hpfilter es un sub módulo de Statmodels que se utiliza para eliminar una tendencia suave.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> statsmodels.tsa.filters.hp_filter <span style="color:#f92672">import</span> hpfilter
+
+ciclo, datos_tendencia <span style="color:#f92672">=</span> hpfilter(df[<span style="color:#e6db74">&#39;EXINUS&#39;</span>],lamb<span style="color:#f92672">=</span><span style="color:#ae81ff">1600</span>)
+df[<span style="color:#e6db74">&#39;trend&#39;</span>] <span style="color:#f92672">=</span> datos_tendencia
+detrended <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;EXINUS&#39;</span>] <span style="color:#f92672">-</span> df[<span style="color:#e6db74">&#39;trend&#39;</span>]
+plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">6</span>))
+plt<span style="color:#f92672">.</span>plot(detrended)
+plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;Eliminación de tendencia usando HP Filter&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>)
+plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;AÑO&#39;</span>)
+plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;CAMBIO&#39;</span>)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1rnyzi1fI4EVjHvZXfj__n1S9YrpKVKF3" alt=""></p>
+<h2 id="estacionalidad">Estacionalidad</h2>
+<p>La estacionalidad es un patrón periódico que sucede en un intervalo de tiempo regular. Por ejemplo las ventas de abrigos tienden a aumentar en temporada de frio y a disminuir en el resto del año. Para detectar estacionalidad dentro de nuestra serie de tiempo podemos usar:</p>
+<ul>
+<li>Boxplots</li>
+<li>Diagrama de autocorrelación</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> seaborn <span style="color:#66d9ef">as</span> sns
+
+df1 <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>reset_index()
+df1[<span style="color:#e6db74">&#39;mes&#39;</span>] <span style="color:#f92672">=</span> df1[<span style="color:#e6db74">&#39;observation_date&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%b&#39;</span>)
+df1[<span style="color:#e6db74">&#39;anio&#39;</span>] <span style="color:#f92672">=</span> [d<span style="color:#f92672">.</span>year <span style="color:#66d9ef">for</span> d <span style="color:#f92672">in</span> df1<span style="color:#f92672">.</span>observation_date]
+df1[<span style="color:#e6db74">&#39;mes&#39;</span>] <span style="color:#f92672">=</span> [d<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%b&#39;</span>) <span style="color:#66d9ef">for</span> d <span style="color:#f92672">in</span> df1<span style="color:#f92672">.</span>observation_date]
+years <span style="color:#f92672">=</span> df1[<span style="color:#e6db74">&#39;anio&#39;</span>]<span style="color:#f92672">.</span>unique()
+plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">6</span>))
+sns<span style="color:#f92672">.</span>boxplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;mes&#39;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;EXINUS&#39;</span>, data<span style="color:#f92672">=</span>df1)<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#34;Boxplots de varios meses&#34;</span>)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1asYNvsu642LCi5gTH_i5_X3K9BiOJl5X" alt=""></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> pandas.plotting <span style="color:#f92672">import</span> autocorrelation_plot
+
+plt<span style="color:#f92672">.</span>rcParams<span style="color:#f92672">.</span>update({<span style="color:#e6db74">&#39;figure.figsize&#39;</span>:(<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">6</span>), <span style="color:#e6db74">&#39;figure.dpi&#39;</span>:<span style="color:#ae81ff">220</span>})
+autocorrelation_plot(df1<span style="color:#f92672">.</span>EXINUS<span style="color:#f92672">.</span>tolist())
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1wF4NuUzAgV63mh7yTtE9Sw_ErVecuEQP" alt=""></p>
+<h3 id="remover-la-estacionalidad-de-datos-de-series-temporales">Remover la estacionalidad de datos de series temporales</h3>
+<p>Remover la estacionalidad significa eliminar la estacionalidad de los datos de series de tiempo. Se despoja del patrón de efecto estacional para desestacionalizar el impacto. Los datos de series de tiempo contienen cuatro componentes principales.</p>
+<ul>
+<li><strong>Nivel (Level)</strong> significa el valor promedio de los datos de la serie temporal.</li>
+<li><strong>Tendencia (Trend)</strong> significa un valor creciente o decreciente en los datos de series de tiempo.</li>
+<li><strong>Estacionalidad (Seasonality)</strong> es la repetición de un patrón de un ciclo en los datos de series de tiempo.</li>
+<li><strong>Ruido (Noise)</strong> significa variación aleatoria en datos de series de tiempo.</li>
+</ul>
+<h3 id="descomposición-estacional">Descomposición estacional</h3>
+<p>La descomposición es el proceso de comprensión de generalizaciones y problemas relacionados con el pronóstico de series de tiempo. Podemos aprovechar la descomposición estacional para eliminar la estacionalidad de los datos y verificar los datos solo con las variaciones de tendencia, cíclicas e irregulares.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> statsmodels.tsa.seasonal <span style="color:#f92672">import</span> seasonal_decompose
+
+result_mul <span style="color:#f92672">=</span> seasonal_decompose(df[<span style="color:#e6db74">&#39;EXINUS&#39;</span>],model<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;multiplicative&#39;</span>, extrapolate_trend<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;freq&#39;</span>)
+deseason <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;EXINUS&#39;</span>] <span style="color:#f92672">-</span> result_mul<span style="color:#f92672">.</span>seasonal
+plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">6</span>))
+plt<span style="color:#f92672">.</span>plot(deseason)
+plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;Descomposición estacional usando seasonal_decompose&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>)
+plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;AÑO&#39;</span>)
+plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;Cambio&#39;</span>)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p><img src="https://drive.google.com//uc?id=1Pk5KYz7QSn1mZ8GyxBlZmVOoADmGgnyK" alt=""></p>
+<h3 id="descomponiendo-una-serie-de-tiempo-en-sus-componentes">Descomponiendo una serie de tiempo en sus componentes</h3>
+<p>La descomposición es un método que se utiliza en las series de tiempo con la finalidad de aislar los datos en sus diferentes componentes como son la tendencia, la estacionalidad, la varianza cíclica y sus residuos.</p>
+<ul>
+<li><strong>Tendencias ( T[t] )</strong> significa un aumento o disminución en el valor de los datos ts.</li>
+<li><strong>Estacionalidad ( S[t] )</strong> significa repetir un ciclo a corto plazo de datos ts.</li>
+<li><strong>Variaciones cíclicas ( c[t] )</strong> significa una fluctuación en las tendencias largas de los datos de ts.</li>
+<li><strong>Residuales ( e[t] )</strong> significa una variación irregular de los datos ts.</li>
+</ul>
+<p>El modelo aditivo trabaja con tendencias lineales de datos de series de tiempo, como cambios constantes a lo largo del tiempo. La fórmula del modelo aditivo es la siguiente:</p>
+<h4 id="yt--tt--st--ct--et">Y[t] = T[t] + S[t] + c[t] + e[t]</h4>
+<p>El modelo multiplicativo funciona con un tipo de datos no lineal como cuadrático o exponencial. La fórmula del modelo multiplicativo es la siguiente:</p>
+<h4 id="yt--tt--st--ct--et-1">Y[t] = T[t] * S[t] * c[t] * e[t]</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> statsmodels.tsa.seasonal <span style="color:#f92672">import</span> seasonal_decompose
+
+result <span style="color:#f92672">=</span> seasonal_decompose(df[<span style="color:#e6db74">&#39;EXINUS&#39;</span>], model<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;add&#39;</span>)
+result<span style="color:#f92672">.</span>plot()
+</code></pre></div><p><img src="https://drive.google.com//uc?id=11KNZh_w2faMzpA_39QAwXiegVvKp-QTz" alt=""></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">result <span style="color:#f92672">=</span> seasonal_decompose(df[<span style="color:#e6db74">&#39;EXINUS&#39;</span>], model<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;mul&#39;</span>)
+result<span style="color:#f92672">.</span>plot()
+</code></pre></div><p><img src="https://drive.google.com//uc?id=16KwAXPftM6HqUxiDUj6Aot8mpH73L5u-" alt=""></p>
+
+                    </div>
+                    
+                    
+                    <div class="after-post-tags">
+                        <ul class="tags">
+                        
+                        <li>
+                        <a href="/tags/timeseries">timeseries</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/series-de-tiempo">series de tiempo</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/python">python</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/scipy">scipy</a>
+                        </li>
+                        
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    
+                        <a class="d-block col-md-6" href="https://projectile-man.github.io/blog/cnn/cnn/"> &laquo; Red Neuronal Convolucional - CNN</a>
+                    
+                    
+                        <a class="d-block col-md-6 text-lg-right" href="https://projectile-man.github.io/blog/perceptron-multicapa/perceptron-multicapa/">Perceptrón multicapa &raquo;</a>
+                    
+                    <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+            </div>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                &copy; Copyright Alberto Ortiz - All rights reserved
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+        </div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<script src="https://projectile-man.github.io/js/mediumish.84218587c174fd40bce82544b98851670f0b124a7324b349c54a4065e2b32ffc.js" integrity="sha256-hCGFh8F0/UC86CVEuYhRZw8LEkpzJLNJxUpAZeKzL/w="></script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nlp on Alberto Ortiz</title>
+    <link>https://projectile-man.github.io/tags/nlp/</link>
+    <description>Recent content in nlp on Alberto Ortiz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alberto Ortiz - All rights reserved</copyright>
+    <lastBuildDate>Sun, 21 Mar 2021 11:40:11 +0200</lastBuildDate><atom:link href="https://projectile-man.github.io/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Combatiendo fake news con Machine Learning</title>
+      <link>https://projectile-man.github.io/blog/fake-news-ml/fake-news-ml/</link>
+      <pubDate>Sun, 21 Mar 2021 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/fake-news-ml/fake-news-ml/</guid>
+      <description>Cada vez mas personas se unen a esta gran red de usuarios en redes sociales lo que los hace que se encuentren al día en cuanto a las noticias que se difunden a lo largo y ancho del globo terráqueo, las redes sociales han encontrado una manera de hacernos llegar la información al instante, lo que los medios tradicionales no llegan a hacer en algunas ocasiones.</description>
+    </item>
+    
+    <item>
+      <title>Preprocesamiento de Texto NLP</title>
+      <link>https://projectile-man.github.io/blog/preprocesamiento-nlp/preprocesamiento-nlp/</link>
+      <pubDate>Fri, 14 Aug 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/preprocesamiento-nlp/preprocesamiento-nlp/</guid>
+      <description>El procedimiento de conversión de los datos en formato de texto a un formato entendible para la computadora, es decir conversion a números, se llama feature engineering de datos de texto.</description>
+    </item>
+    
+  </channel>
+</rss>

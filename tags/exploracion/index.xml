@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>exploracion on Alberto Ortiz</title>
+    <link>https://projectile-man.github.io/tags/exploracion/</link>
+    <description>Recent content in exploracion on Alberto Ortiz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alberto Ortiz - All rights reserved</copyright>
+    <lastBuildDate>Wed, 29 Jul 2020 11:40:11 +0200</lastBuildDate><atom:link href="https://projectile-man.github.io/tags/exploracion/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>¿Qué productos se venden más en los supermercados en México? Análisis con Spark</title>
+      <link>https://projectile-man.github.io/blog/productos-vendidos/productos-vendidos/</link>
+      <pubDate>Wed, 29 Jul 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/productos-vendidos/productos-vendidos/</guid>
+      <description>El conocer a nuestros consumidores la mayoría de las veces es de gran relevancia para las empresas ya que logran obtener datos de los productos que más venden, logrando con esto mantener sus almacenes con los productos en existencia.</description>
+    </item>
+    
+    <item>
+      <title>Exploración de los delitos en la CDMX</title>
+      <link>https://projectile-man.github.io/blog/delitos-exploracion/delitos-exploracion/</link>
+      <pubDate>Mon, 27 Jul 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/delitos-exploracion/delitos-exploracion/</guid>
+      <description>La mayoría de las personas que vivimos en la Ciudad de México hemos sido victimas de la delinciencia o hemos escuchado a una/un amig@, vecin@ que fue afectado por la actividad criminal en la ciudad.</description>
+    </item>
+    
+  </channel>
+</rss>

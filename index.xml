@@ -7,23 +7,78 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Alberto Ortiz - All rights reserved</copyright>
-    <lastBuildDate>Sun, 07 Oct 2018 11:40:14 +0200</lastBuildDate><atom:link href="https://projectile-man.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Mar 2021 11:40:11 +0200</lastBuildDate><atom:link href="https://projectile-man.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Ninth</title>
-      <link>https://projectile-man.github.io/blog/ninth/</link>
-      <pubDate>Sun, 07 Oct 2018 11:40:14 +0200</pubDate>
+      <title>Combatiendo fake news con Machine Learning</title>
+      <link>https://projectile-man.github.io/blog/fake-news-ml/fake-news-ml/</link>
+      <pubDate>Sun, 21 Mar 2021 11:40:11 +0200</pubDate>
       
-      <guid>https://projectile-man.github.io/blog/ninth/</guid>
-      <description>This is another post Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum.</description>
+      <guid>https://projectile-man.github.io/blog/fake-news-ml/fake-news-ml/</guid>
+      <description>Cada vez mas personas se unen a esta gran red de usuarios en redes sociales lo que los hace que se encuentren al día en cuanto a las noticias que se difunden a lo largo y ancho del globo terráqueo, las redes sociales han encontrado una manera de hacernos llegar la información al instante, lo que los medios tradicionales no llegan a hacer en algunas ocasiones.</description>
     </item>
     
     <item>
-      <title>Eighth</title>
-      <link>https://projectile-man.github.io/blog/eighth/</link>
-      <pubDate>Sun, 07 Oct 2018 11:40:11 +0200</pubDate>
+      <title>Red Neuronal Recurrente - RNN</title>
+      <link>https://projectile-man.github.io/blog/rnn/rnn/</link>
+      <pubDate>Sun, 01 Nov 2020 11:40:11 +0200</pubDate>
       
-      <guid>https://projectile-man.github.io/blog/eighth/</guid>
-      <description>This is another post Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum.</description>
+      <guid>https://projectile-man.github.io/blog/rnn/rnn/</guid>
+      <description>Como parte de ésta secuencia de redes neuronales en este post mostrare la red neuronal recurrente (recurrent neural network) o de forma simplificada RNN, si no has leído los post de las dos primeras arquitecturas anexo el link del red neuronal convolucional y el link del perceptron multicapa.</description>
+    </item>
+    
+    <item>
+      <title>Red Neuronal Convolucional - CNN</title>
+      <link>https://projectile-man.github.io/blog/cnn/cnn/</link>
+      <pubDate>Mon, 21 Sep 2020 16:26:30 -0600</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/cnn/cnn/</guid>
+      <description>Ahora en este post vamos a ver la segunda red neuronal llamada Red Neuronal Convolucional (Convolutional Neural Network), si no has leído el post en que hablo del perceptron multicapa te dejo el link.</description>
+    </item>
+    
+    <item>
+      <title>Introducción a las series de tiempo</title>
+      <link>https://projectile-man.github.io/blog/intro-timeseries/intro-timeseries/</link>
+      <pubDate>Sat, 19 Sep 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/intro-timeseries/intro-timeseries/</guid>
+      <description>Este post será una introducción a las series de tiempo, sus componentes y veremos como descomponerla en sus propiedades.
+Primero que nada debemos de tener en mente qué tipo de datos vamos a tratar antes de realizar cualquier análisis, entre los tipos de datos que podemos tener son: Datos de series de tiempo (Time series data), Datos transversales (Cross-section data), Datos Panel o Datos longitudinales (Panel/Longitudinal Data).</description>
+    </item>
+    
+    <item>
+      <title>Perceptrón multicapa</title>
+      <link>https://projectile-man.github.io/blog/perceptron-multicapa/perceptron-multicapa/</link>
+      <pubDate>Tue, 25 Aug 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/perceptron-multicapa/perceptron-multicapa/</guid>
+      <description>Las redes neuronales artificiales no son una idea nueva en nuestros tiempos, de hecho existen alrededor de los sesentas, con la investigación de Frank Rosenblatt al crear el perceptrón, pero no es hasta el 2011 que empiezan a emerger como una forma de reconocer patrones, y lo que las hace resurgir es el desarrollo tecnológico, abriendo la posibilidad de implementarlas para su uso en la investigación y en la resolución de problemas.</description>
+    </item>
+    
+    <item>
+      <title>Preprocesamiento de Texto NLP</title>
+      <link>https://projectile-man.github.io/blog/preprocesamiento-nlp/preprocesamiento-nlp/</link>
+      <pubDate>Fri, 14 Aug 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/preprocesamiento-nlp/preprocesamiento-nlp/</guid>
+      <description>El procedimiento de conversión de los datos en formato de texto a un formato entendible para la computadora, es decir conversion a números, se llama feature engineering de datos de texto.</description>
+    </item>
+    
+    <item>
+      <title>¿Qué productos se venden más en los supermercados en México? Análisis con Spark</title>
+      <link>https://projectile-man.github.io/blog/productos-vendidos/productos-vendidos/</link>
+      <pubDate>Wed, 29 Jul 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/productos-vendidos/productos-vendidos/</guid>
+      <description>El conocer a nuestros consumidores la mayoría de las veces es de gran relevancia para las empresas ya que logran obtener datos de los productos que más venden, logrando con esto mantener sus almacenes con los productos en existencia.</description>
+    </item>
+    
+    <item>
+      <title>Exploración de los delitos en la CDMX</title>
+      <link>https://projectile-man.github.io/blog/delitos-exploracion/delitos-exploracion/</link>
+      <pubDate>Mon, 27 Jul 2020 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/blog/delitos-exploracion/delitos-exploracion/</guid>
+      <description>La mayoría de las personas que vivimos en la Ciudad de México hemos sido victimas de la delinciencia o hemos escuchado a una/un amig@, vecin@ que fue afectado por la actividad criminal en la ciudad.</description>
     </item>
     
     <item>
@@ -32,70 +87,7 @@
       <pubDate>Sun, 07 Oct 2018 11:40:11 +0200</pubDate>
       
       <guid>https://projectile-man.github.io/portafolio/eighth/</guid>
-      <description>This is another post Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum.</description>
-    </item>
-    
-    <item>
-      <title>Seventh</title>
-      <link>https://projectile-man.github.io/blog/seventh/</link>
-      <pubDate>Sun, 07 Oct 2018 11:39:29 +0200</pubDate>
-      
-      <guid>https://projectile-man.github.io/blog/seventh/</guid>
-      <description>This is another post Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum.</description>
-    </item>
-    
-    <item>
-      <title>Sixth</title>
-      <link>https://projectile-man.github.io/blog/sixth/</link>
-      <pubDate>Sun, 07 Oct 2018 11:39:25 +0200</pubDate>
-      
-      <guid>https://projectile-man.github.io/blog/sixth/</guid>
-      <description>This is another post Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum.</description>
-    </item>
-    
-    <item>
-      <title>Fifth</title>
-      <link>https://projectile-man.github.io/blog/fifth/</link>
-      <pubDate>Sun, 07 Oct 2018 11:39:22 +0200</pubDate>
-      
-      <guid>https://projectile-man.github.io/blog/fifth/</guid>
-      <description>This is another post Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum.</description>
-    </item>
-    
-    <item>
-      <title>Fourth</title>
-      <link>https://projectile-man.github.io/blog/fourth/</link>
-      <pubDate>Sun, 07 Oct 2018 11:39:16 +0200</pubDate>
-      
-      <guid>https://projectile-man.github.io/blog/fourth/</guid>
-      <description>This is another post Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum.</description>
-    </item>
-    
-    <item>
-      <title>Third</title>
-      <link>https://projectile-man.github.io/blog/third/</link>
-      <pubDate>Sun, 07 Oct 2018 11:39:13 +0200</pubDate>
-      
-      <guid>https://projectile-man.github.io/blog/third/</guid>
-      <description>This is another post Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum.</description>
-    </item>
-    
-    <item>
-      <title>Second</title>
-      <link>https://projectile-man.github.io/blog/second/</link>
-      <pubDate>Sun, 07 Oct 2018 11:39:10 +0200</pubDate>
-      
-      <guid>https://projectile-man.github.io/blog/second/</guid>
-      <description>This is another post Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum.</description>
-    </item>
-    
-    <item>
-      <title>My First Post</title>
-      <link>https://projectile-man.github.io/blog/my-first-post/</link>
-      <pubDate>Sun, 07 Oct 2018 11:17:14 +0200</pubDate>
-      
-      <guid>https://projectile-man.github.io/blog/my-first-post/</guid>
-      <description>This is my first post Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum.</description>
+      <description>This is another post Ahora en este post vamos a ver la segunda red neuronal llamada Red Neuronal Convolucional (Convolutional Neural Network), si no has leído el post en que hablo del perceptron multicapa te dejo el link.</description>
     </item>
     
   </channel>
