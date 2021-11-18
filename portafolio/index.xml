@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portafolios on Alberto Ortiz</title>
+    <link>https://projectile-man.github.io/portafolio/</link>
+    <description>Recent content in Portafolios on Alberto Ortiz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alberto Ortiz - All rights reserved</copyright>
+    <lastBuildDate>Sun, 07 Oct 2018 11:40:11 +0200</lastBuildDate><atom:link href="https://projectile-man.github.io/portafolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Eighth</title>
+      <link>https://projectile-man.github.io/portafolio/eighth/</link>
+      <pubDate>Sun, 07 Oct 2018 11:40:11 +0200</pubDate>
+      
+      <guid>https://projectile-man.github.io/portafolio/eighth/</guid>
+      <description>This is another post Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum.</description>
+    </item>
+    
+  </channel>
+</rss>
